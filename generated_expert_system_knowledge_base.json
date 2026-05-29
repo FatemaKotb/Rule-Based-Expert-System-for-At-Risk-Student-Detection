@@ -1,0 +1,278 @@
+[
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": "<=",
+        "threshold": 9.5,
+        "text": "G2 <= 9.5"
+      },
+      {
+        "feature": "G2",
+        "operator": "<=",
+        "threshold": 7.5,
+        "text": "G2 <= 7.5"
+      }
+    ],
+    "conditions_text": "G2 <= 9.5 AND G2 <= 7.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 1.0,
+    "training_samples": 51,
+    "rule_id": 1
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": "<=",
+        "threshold": 9.5,
+        "text": "G2 <= 9.5"
+      },
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 7.5,
+        "text": "G2 > 7.5"
+      },
+      {
+        "feature": "Fedu",
+        "operator": "<=",
+        "threshold": 1.5,
+        "text": "Fedu <= 1.5"
+      },
+      {
+        "feature": "sex_F",
+        "operator": "<=",
+        "threshold": 0.5,
+        "text": "sex is not F"
+      }
+    ],
+    "conditions_text": "G2 <= 9.5 AND G2 > 7.5 AND Fedu <= 1.5 AND sex is not F",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.8717,
+    "training_samples": 13,
+    "rule_id": 2
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": "<=",
+        "threshold": 9.5,
+        "text": "G2 <= 9.5"
+      },
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 7.5,
+        "text": "G2 > 7.5"
+      },
+      {
+        "feature": "Fedu",
+        "operator": "<=",
+        "threshold": 1.5,
+        "text": "Fedu <= 1.5"
+      },
+      {
+        "feature": "sex_F",
+        "operator": ">",
+        "threshold": 0.5,
+        "text": "sex is F"
+      }
+    ],
+    "conditions_text": "G2 <= 9.5 AND G2 > 7.5 AND Fedu <= 1.5 AND sex is F",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 0.5954,
+    "training_samples": 12,
+    "rule_id": 3
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": "<=",
+        "threshold": 9.5,
+        "text": "G2 <= 9.5"
+      },
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 7.5,
+        "text": "G2 > 7.5"
+      },
+      {
+        "feature": "Fedu",
+        "operator": ">",
+        "threshold": 1.5,
+        "text": "Fedu > 1.5"
+      },
+      {
+        "feature": "famrel",
+        "operator": "<=",
+        "threshold": 4.5,
+        "text": "famrel <= 4.5"
+      }
+    ],
+    "conditions_text": "G2 <= 9.5 AND G2 > 7.5 AND Fedu > 1.5 AND famrel <= 4.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.9532,
+    "training_samples": 33,
+    "rule_id": 4
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": "<=",
+        "threshold": 9.5,
+        "text": "G2 <= 9.5"
+      },
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 7.5,
+        "text": "G2 > 7.5"
+      },
+      {
+        "feature": "Fedu",
+        "operator": ">",
+        "threshold": 1.5,
+        "text": "Fedu > 1.5"
+      },
+      {
+        "feature": "famrel",
+        "operator": ">",
+        "threshold": 4.5,
+        "text": "famrel > 4.5"
+      }
+    ],
+    "conditions_text": "G2 <= 9.5 AND G2 > 7.5 AND Fedu > 1.5 AND famrel > 4.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.7182,
+    "training_samples": 9,
+    "rule_id": 5
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 9.5,
+        "text": "G2 > 9.5"
+      },
+      {
+        "feature": "G1",
+        "operator": "<=",
+        "threshold": 10.5,
+        "text": "G1 <= 10.5"
+      },
+      {
+        "feature": "age",
+        "operator": "<=",
+        "threshold": 17.5,
+        "text": "age <= 17.5"
+      },
+      {
+        "feature": "famsize_LE3",
+        "operator": "<=",
+        "threshold": 0.5,
+        "text": "famsize is not LE3"
+      }
+    ],
+    "conditions_text": "G2 > 9.5 AND G1 <= 10.5 AND age <= 17.5 AND famsize is not LE3",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 1.0,
+    "training_samples": 28,
+    "rule_id": 6
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 9.5,
+        "text": "G2 > 9.5"
+      },
+      {
+        "feature": "G1",
+        "operator": "<=",
+        "threshold": 10.5,
+        "text": "G1 <= 10.5"
+      },
+      {
+        "feature": "age",
+        "operator": "<=",
+        "threshold": 17.5,
+        "text": "age <= 17.5"
+      },
+      {
+        "feature": "famsize_LE3",
+        "operator": ">",
+        "threshold": 0.5,
+        "text": "famsize is LE3"
+      }
+    ],
+    "conditions_text": "G2 > 9.5 AND G1 <= 10.5 AND age <= 17.5 AND famsize is LE3",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 0.6319,
+    "training_samples": 9,
+    "rule_id": 7
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 9.5,
+        "text": "G2 > 9.5"
+      },
+      {
+        "feature": "G1",
+        "operator": "<=",
+        "threshold": 10.5,
+        "text": "G1 <= 10.5"
+      },
+      {
+        "feature": "age",
+        "operator": ">",
+        "threshold": 17.5,
+        "text": "age > 17.5"
+      }
+    ],
+    "conditions_text": "G2 > 9.5 AND G1 <= 10.5 AND age > 17.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.7536,
+    "training_samples": 5,
+    "rule_id": 8
+  },
+  {
+    "conditions": [
+      {
+        "feature": "G2",
+        "operator": ">",
+        "threshold": 9.5,
+        "text": "G2 > 9.5"
+      },
+      {
+        "feature": "G1",
+        "operator": ">",
+        "threshold": 10.5,
+        "text": "G1 > 10.5"
+      }
+    ],
+    "conditions_text": "G2 > 9.5 AND G1 > 10.5",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 1.0,
+    "training_samples": 156,
+    "rule_id": 9
+  }
+]

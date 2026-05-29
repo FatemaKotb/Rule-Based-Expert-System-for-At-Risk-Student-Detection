@@ -1,0 +1,10 @@
+rule_id,conditions,prediction,confidence,training_samples
+1,G2 <= 9.5 AND G2 <= 7.5,At Risk,1.0,51
+2,G2 <= 9.5 AND G2 > 7.5 AND Fedu <= 1.5 AND sex is not F,At Risk,0.8717,13
+3,G2 <= 9.5 AND G2 > 7.5 AND Fedu <= 1.5 AND sex is F,Not At Risk,0.5954,12
+4,G2 <= 9.5 AND G2 > 7.5 AND Fedu > 1.5 AND famrel <= 4.5,At Risk,0.9532,33
+5,G2 <= 9.5 AND G2 > 7.5 AND Fedu > 1.5 AND famrel > 4.5,At Risk,0.7182,9
+6,G2 > 9.5 AND G1 <= 10.5 AND age <= 17.5 AND famsize is not LE3,Not At Risk,1.0,28
+7,G2 > 9.5 AND G1 <= 10.5 AND age <= 17.5 AND famsize is LE3,Not At Risk,0.6319,9
+8,G2 > 9.5 AND G1 <= 10.5 AND age > 17.5,At Risk,0.7536,5
+9,G2 > 9.5 AND G1 > 10.5,Not At Risk,1.0,156
