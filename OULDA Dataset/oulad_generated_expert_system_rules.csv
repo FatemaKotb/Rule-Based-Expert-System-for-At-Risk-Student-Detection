@@ -1,0 +1,15 @@
+rule_id,conditions,prediction,confidence,training_samples
+1,average_CA_score <= 54.105 AND average_CA_score <= 33.395 AND average_CA_score <= 24.628,At Risk,1.0,111
+2,average_CA_score <= 54.105 AND average_CA_score <= 33.395 AND average_CA_score > 24.628 AND average_CA_score <= 29.174,At Risk,0.9146,13
+3,average_CA_score <= 54.105 AND average_CA_score <= 33.395 AND average_CA_score > 24.628 AND average_CA_score > 29.174,At Risk,1.0,13
+4,average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score <= 44.616 AND total_clicks <= 54.5,At Risk,1.0,16
+5,average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score <= 44.616 AND total_clicks > 54.5,At Risk,0.8648,90
+6,average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score > 44.616 AND date_registration <= -20.5,At Risk,0.7554,75
+7,average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score > 44.616 AND date_registration > -20.5,Not At Risk,1.0,6
+8,average_CA_score > 54.105 AND average_CA_score <= 75.105 AND imd_band is not 90-100% AND average_CA_score <= 61.988,At Risk,0.5553,87
+9,average_CA_score > 54.105 AND average_CA_score <= 75.105 AND imd_band is not 90-100% AND average_CA_score > 61.988,Not At Risk,0.6632,348
+10,average_CA_score > 54.105 AND average_CA_score <= 75.105 AND imd_band is 90-100%,Not At Risk,1.0,23
+11,average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score <= 80.663 AND average_CA_score <= 75.86,Not At Risk,1.0,24
+12,average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score <= 80.663 AND average_CA_score > 75.86,Not At Risk,0.8142,162
+13,average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score > 80.663 AND imd_band is not 10-20%,Not At Risk,0.9679,179
+14,average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score > 80.663 AND imd_band is 10-20%,Not At Risk,0.755,14

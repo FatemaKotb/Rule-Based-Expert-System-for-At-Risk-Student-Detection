@@ -1,0 +1,466 @@
+[
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score <= 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 24.627906799316406,
+        "text": "average_CA_score <= 24.628"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score <= 33.395 AND average_CA_score <= 24.628",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 1.0,
+    "training_samples": 111,
+    "rule_id": 1
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score <= 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 24.627906799316406,
+        "text": "average_CA_score > 24.628"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 29.174418449401855,
+        "text": "average_CA_score <= 29.174"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score <= 33.395 AND average_CA_score > 24.628 AND average_CA_score <= 29.174",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.9146,
+    "training_samples": 13,
+    "rule_id": 2
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score <= 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 24.627906799316406,
+        "text": "average_CA_score > 24.628"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 29.174418449401855,
+        "text": "average_CA_score > 29.174"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score <= 33.395 AND average_CA_score > 24.628 AND average_CA_score > 29.174",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 1.0,
+    "training_samples": 13,
+    "rule_id": 3
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score > 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 44.61627769470215,
+        "text": "average_CA_score <= 44.616"
+      },
+      {
+        "feature": "total_clicks",
+        "operator": "<=",
+        "threshold": 54.5,
+        "text": "total_clicks <= 54.5"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score <= 44.616 AND total_clicks <= 54.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 1.0,
+    "training_samples": 16,
+    "rule_id": 4
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score > 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 44.61627769470215,
+        "text": "average_CA_score <= 44.616"
+      },
+      {
+        "feature": "total_clicks",
+        "operator": ">",
+        "threshold": 54.5,
+        "text": "total_clicks > 54.5"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score <= 44.616 AND total_clicks > 54.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.8648,
+    "training_samples": 90,
+    "rule_id": 5
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score > 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 44.61627769470215,
+        "text": "average_CA_score > 44.616"
+      },
+      {
+        "feature": "date_registration",
+        "operator": "<=",
+        "threshold": -20.5,
+        "text": "date_registration <= -20.5"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score > 44.616 AND date_registration <= -20.5",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.7554,
+    "training_samples": 75,
+    "rule_id": 6
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score <= 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 33.39534950256348,
+        "text": "average_CA_score > 33.395"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 44.61627769470215,
+        "text": "average_CA_score > 44.616"
+      },
+      {
+        "feature": "date_registration",
+        "operator": ">",
+        "threshold": -20.5,
+        "text": "date_registration > -20.5"
+      }
+    ],
+    "conditions_text": "average_CA_score <= 54.105 AND average_CA_score > 33.395 AND average_CA_score > 44.616 AND date_registration > -20.5",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 1.0,
+    "training_samples": 6,
+    "rule_id": 7
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score <= 75.105"
+      },
+      {
+        "feature": "imd_band_90-100%",
+        "operator": "<=",
+        "threshold": 0.5,
+        "text": "imd_band is not 90-100%"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 61.988372802734375,
+        "text": "average_CA_score <= 61.988"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score <= 75.105 AND imd_band is not 90-100% AND average_CA_score <= 61.988",
+    "prediction_code": 1,
+    "prediction_label": "At Risk",
+    "confidence": 0.5553,
+    "training_samples": 87,
+    "rule_id": 8
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score <= 75.105"
+      },
+      {
+        "feature": "imd_band_90-100%",
+        "operator": "<=",
+        "threshold": 0.5,
+        "text": "imd_band is not 90-100%"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 61.988372802734375,
+        "text": "average_CA_score > 61.988"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score <= 75.105 AND imd_band is not 90-100% AND average_CA_score > 61.988",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 0.6632,
+    "training_samples": 348,
+    "rule_id": 9
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score <= 75.105"
+      },
+      {
+        "feature": "imd_band_90-100%",
+        "operator": ">",
+        "threshold": 0.5,
+        "text": "imd_band is 90-100%"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score <= 75.105 AND imd_band is 90-100%",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 1.0,
+    "training_samples": 23,
+    "rule_id": 10
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score > 75.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 80.66278839111328,
+        "text": "average_CA_score <= 80.663"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 75.86046600341797,
+        "text": "average_CA_score <= 75.86"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score <= 80.663 AND average_CA_score <= 75.86",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 1.0,
+    "training_samples": 24,
+    "rule_id": 11
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score > 75.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": "<=",
+        "threshold": 80.66278839111328,
+        "text": "average_CA_score <= 80.663"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 75.86046600341797,
+        "text": "average_CA_score > 75.86"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score <= 80.663 AND average_CA_score > 75.86",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 0.8142,
+    "training_samples": 162,
+    "rule_id": 12
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score > 75.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 80.66278839111328,
+        "text": "average_CA_score > 80.663"
+      },
+      {
+        "feature": "imd_band_10-20%",
+        "operator": "<=",
+        "threshold": 0.5,
+        "text": "imd_band is not 10-20%"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score > 80.663 AND imd_band is not 10-20%",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 0.9679,
+    "training_samples": 179,
+    "rule_id": 13
+  },
+  {
+    "conditions": [
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 54.10465049743652,
+        "text": "average_CA_score > 54.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 75.10465240478516,
+        "text": "average_CA_score > 75.105"
+      },
+      {
+        "feature": "average_CA_score",
+        "operator": ">",
+        "threshold": 80.66278839111328,
+        "text": "average_CA_score > 80.663"
+      },
+      {
+        "feature": "imd_band_10-20%",
+        "operator": ">",
+        "threshold": 0.5,
+        "text": "imd_band is 10-20%"
+      }
+    ],
+    "conditions_text": "average_CA_score > 54.105 AND average_CA_score > 75.105 AND average_CA_score > 80.663 AND imd_band is 10-20%",
+    "prediction_code": 0,
+    "prediction_label": "Not At Risk",
+    "confidence": 0.755,
+    "training_samples": 14,
+    "rule_id": 14
+  }
+]
