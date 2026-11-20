@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\caption{Contextual Comparison with OULAD At-Risk Results Reported in Related Work}
+\label{tab:related-work-comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+Study & Model & Accuracy (\%) & Precision$_{risk}$ & Recall$_{risk}$ & F1$_{risk}$ \\
+\midrule
+Our work & Expert System (ES) & 83.2 & 0.740 & 0.778 & 0.759 \\
+Our work & Logistic Regression (LR) & 82.8 & 0.738 & 0.768 & 0.753 \\
+Our work & SVM & 84.9 & 0.784 & 0.768 & 0.776 \\
+\midrule
+\cite{ujkani2024oulad} & Random Forest & 86.0 & 0.860 & 0.970 & 0.910 \\
+\cite{ujkani2024oulad} & Gradient Boosting & 81.0 & 0.830 & 0.960 & 0.890 \\
+\cite{ujkani2024oulad} & k-NN & 82.0 & 0.840 & 0.940 & 0.890 \\
+\cite{ujkani2024oulad} & MLP & 85.0 & 0.880 & 0.940 & 0.910 \\
+\cite{ujkani2024oulad} & CNN & 86.0 & 0.870 & 0.950 & 0.910 \\
+\cite{ujkani2024oulad} & LSTM & 81.0 & 0.840 & 0.920 & 0.880 \\
+\cite{ujkani2024oulad} & XGBoost & 86.0 & 0.870 & 0.960 & 0.910 \\
+\cite{ujkani2024oulad} & Custom NN & 93.0 & 0.950 & 0.970 & 0.960 \\
+\bottomrule
+\end{tabular}%
+}
+\vspace{1mm}
+\footnotesize{\textit{Note:} Related-work metrics are taken from Tables 7--10 of \textcite{ujkani2024oulad}. Their at-risk task reports Pass and Fail, where the Fail class includes non-success outcomes used for identifying at-risk students. The comparison is contextual because the studies differ in scope, feature setup, and modelling aim.}
+\end{table}

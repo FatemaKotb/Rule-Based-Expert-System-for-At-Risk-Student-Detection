@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+
+% ------------------ PAGE / FONT SETUP ------------------
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+% ------------------ REFERENCES ------------------
+% Compile locally with:
+% pdflatex main.tex
+% biber main
+% pdflatex main.tex
+% pdflatex main.tex
+\usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
+\addbibresource{references.bib}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+
+\begin{document}
+\fontsize{13pt}{19.5pt}\selectfont
+
+% =========================================================
+% TITLE PAGE / HEADER
+% =========================================================
+
+\begin{center}
+
+    {\Large \textbf{Rule-Based Expert System for Early Identification of At-Risk Students in Online Learning}}\\[1cm]
+
+    \textbf{FATEMA KOTB}\footnote{fatema.kotb02@eng-st.cu.edu.eg}
+    and
+    \textbf{NORAN HANY}\footnote{hany.noran10@gmail.com}\\[0.5cm]
+
+    Computer Engineering Department, Faculty of Engineering, Cairo University, Egypt
+\end{center}
+
+\vspace{1cm}
+
+% =========================================================
+% ABSTRACT
+% =========================================================
+
+\input{sections/abstract}
+
+% =========================================================
+% MAIN PAPER BODY
+% =========================================================
+
+\onehalfspacing
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/proposed_approach}
+\input{sections/results}
+\input{sections/conclusion}
+
+% =========================================================
+% REFERENCES
+% =========================================================
+
+\newpage
+\printbibliography[title={References}]
+
+\end{document}

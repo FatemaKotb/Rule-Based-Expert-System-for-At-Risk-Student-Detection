@@ -1,0 +1,25 @@
+\section{RELATED WORK}
+
+\subsection{The OULAD Dataset}
+
+The Open University Learning Analytics Dataset (OULAD) was published by \textcite{kuzilek2017oulad}. It contains anonymised records from a large UK distance learning university and covers 22 course presentations with over 32,000 students. For each student, the dataset includes demographic information such as age, gender, region, and socioeconomic background, along with assessment scores and daily logs of interactions with the university's Virtual Learning Environment (VLE). Because it is publicly available and consistently structured, OULAD has become one of the most widely used datasets in educational data mining research.
+
+\subsection{The Task of At-Risk Prediction}
+
+At-risk prediction is the task of identifying, before a course ends, which students are likely to fail or withdraw. The practical value of this is that it gives educators and support teams time to intervene while the student can still benefit. The task is typically set up as a binary classification problem: each student is labelled as at risk or not at risk, and a model is trained to assign one of these labels based on available features. A key design decision in any such system is how much course data to use. Using data from the full course duration produces more accurate predictions but leaves no time to act on them. Restricting the input to an early window -- such as the first few weeks -- makes the predictions less certain but far more useful in practice.
+
+\subsection{XAI-Based Course Success Prediction}
+
+\textcite{ujkani2024oulad} applied a range of machine learning and deep learning models to OULAD for course-success prediction and early identification of at-risk students. Their study defined success as passing the course and treated failing grades or withdrawal as failure outcomes. For the at-risk task, their reported tables use the labels Pass and Fail, where the Fail class represents the risk class used for intervention-focused evaluation. Their best-performing model, a custom neural network, achieved 93\% accuracy for at-risk classification. They then applied SHAP (SHapley Additive exPlanations) to explain which features drove the predictions \parencite{lundberg2017unified}. Total VLE clicks and registration date were identified as important predictors, with socioeconomic background also contributing.
+
+This project is narrower than the work of \textcite{ujkani2024oulad}. It focuses on one course offering, BBB/2013J, uses a fourteen-week early observation window, and compares an explicit rule-based expert system against two local ML baselines. Therefore, the results from that study are useful for context but are not directly equivalent to the results reported here.
+
+\subsection{The Need for Explainability}
+
+Accurate predictions alone are not always enough. In an educational setting, tutors and support staff need to understand why a student has been flagged as at risk in order to decide what kind of help to offer. A model that produces a risk score without any explanation is difficult to act on and difficult to trust. \textcite{khosravi2022explainable} identified this as a major reason why accurate predictive models often go unused in practice. \textcite{shabaninejad2022explanations} showed that when predictions were accompanied by explanations, educators engaged more actively with the system.
+
+Two broad approaches exist for making predictions explainable. Post-hoc methods such as SHAP explain a model's output after the prediction has been made, by estimating how much each feature contributed to that specific result \parencite{lundberg2017unified}. Rule-based approaches instead encode the decision logic directly as explicit IF-THEN conditions, so the full reasoning of the system can be read before it is ever used. Both approaches aim to make predictions understandable, but they differ in when and how that understanding is produced.
+
+\subsection{Expert Systems}
+
+An expert system is a rule-based program that makes decisions by applying IF-THEN rules to a given case. Each rule links a set of conditions to a conclusion, allowing the system to explain how a decision was reached. This makes expert systems different from many statistical and machine-learning models, where the internal decision process may be harder to inspect. In education, this transparency is useful because predictions about students are not only technical outputs; they may also inform academic support, intervention, and decision-making.

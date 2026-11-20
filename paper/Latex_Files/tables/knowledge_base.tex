@@ -1,0 +1,29 @@
+\begin{small}
+\begin{longtable}{p{0.65cm}p{6.9cm}p{2.2cm}p{1.1cm}p{1.2cm}}
+\caption{Generated Expert System Knowledge Base}\label{tab:knowledge-base}\\
+\toprule
+Rule & Conditions & Prediction & Conf. & Support \\
+\midrule
+\endfirsthead
+\toprule
+Rule & Conditions & Prediction & Conf. & Support \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & \texttt{average\_CA\_score} $\leq$ 24.628 & At Risk & 1.00 & 111 \\
+2 & 24.628 $<$ \texttt{average\_CA\_score} $\leq$ 29.174 & At Risk & 0.91 & 13 \\
+3 & 29.174 $<$ \texttt{average\_CA\_score} $\leq$ 33.395 & At Risk & 1.00 & 13 \\
+4 & 33.395 $<$ \texttt{average\_CA\_score} $\leq$ 44.616 AND \texttt{total\_clicks} $\leq$ 54.5 & At Risk & 1.00 & 16 \\
+5 & 33.395 $<$ \texttt{average\_CA\_score} $\leq$ 44.616 AND \texttt{total\_clicks} $>$ 54.5 & At Risk & 0.86 & 90 \\
+6 & 44.616 $<$ \texttt{average\_CA\_score} $\leq$ 54.105 AND \texttt{date\_registration} $\leq$ -20.5 & At Risk & 0.76 & 75 \\
+7 & 44.616 $<$ \texttt{average\_CA\_score} $\leq$ 54.105 AND \texttt{date\_registration} $>$ -20.5 & Not At Risk & 1.00 & 6 \\
+8 & 54.105 $<$ \texttt{average\_CA\_score} $\leq$ 61.988 AND \texttt{imd\_band} is not 90--100\% & At Risk & 0.56 & 87 \\
+9 & 61.988 $<$ \texttt{average\_CA\_score} $\leq$ 75.105 AND \texttt{imd\_band} is not 90--100\% & Not At Risk & 0.66 & 348 \\
+10 & 54.105 $<$ \texttt{average\_CA\_score} $\leq$ 75.105 AND \texttt{imd\_band} is 90--100\% & Not At Risk & 1.00 & 23 \\
+11 & 75.105 $<$ \texttt{average\_CA\_score} $\leq$ 75.860 & Not At Risk & 1.00 & 24 \\
+12 & 75.860 $<$ \texttt{average\_CA\_score} $\leq$ 80.663 & Not At Risk & 0.81 & 162 \\
+13 & \texttt{average\_CA\_score} $>$ 80.663 AND \texttt{imd\_band} is not 10--20\% & Not At Risk & 0.97 & 179 \\
+14 & \texttt{average\_CA\_score} $>$ 80.663 AND \texttt{imd\_band} is 10--20\% & Not At Risk & 0.76 & 14 \\
+\end{longtable}
+\end{small}

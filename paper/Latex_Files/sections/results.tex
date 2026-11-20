@@ -1,0 +1,33 @@
+\section{RESULTS}
+
+\subsection{Dataset Characteristics}
+
+The preprocessed dataset contained 1,452 student records from module BBB, presentation 2013J, of which 959 were Not At Risk (66.05\%) and 493 were At Risk (33.95\%). This roughly two-to-one class ratio was preserved across the training and test sets through stratified splitting.
+
+\subsection{Expert System Knowledge Base}
+
+The full knowledge base is shown in Table~\ref{tab:knowledge-base}. The support column reports the number of training samples that reached each decision-tree leaf before the rule was converted into an expert-system rule.
+
+\input{tables/knowledge_base}
+
+As shown in the decision tree, \texttt{average\_CA\_score} was the main factor used to separate At Risk and Not At Risk students. Very low scores were classified as At Risk with high confidence, while high scores were generally classified as Not At Risk. The middle score ranges were less certain and required additional conditions, such as \texttt{total\_clicks}, \texttt{date\_registration}, and \texttt{imd\_band}, showing that engagement, registration timing, and background factors were mainly used to refine predictions when assessment performance alone did not clearly indicate risk.
+
+\subsection{Expert System Performance Against the ML Baselines}
+
+Table~\ref{tab:model-performance} shows how these results compare to the two ML baselines.
+
+\input{tables/model_performance}
+
+Table~\ref{tab:confusion-matrices} shows the corresponding confusion-matrix counts for the same held-out test set.
+
+\input{tables/confusion_matrices}
+
+The expert system achieved the highest recall, correctly identifying 77 of the 99 at-risk students in the test set. Logistic regression identified 76 at-risk students, and the support vector machine also identified 76. The support vector machine achieved the highest accuracy, precision, and F1-score, indicating a slightly stronger balance between false positives and false negatives. The differences between the three systems were small, so the results should be interpreted as metric-specific rather than as one system clearly outperforming the others on all criteria. The main advantage of the expert system is that it reached comparable performance while keeping the decision process available as explicit IF-THEN rules.
+
+\subsection{Comparison with Related OULAD At-Risk Models}
+
+Table~\ref{tab:related-work-comparison} compares our ES/LR/SVM results against the at-risk results reported by \textcite{ujkani2024oulad}.
+
+\input{tables/related_work_comparison}
+
+This comparison should be read as contextual rather than directly equivalent. Ujkani et al. used OULAD for a broader modelling study and reported results for several machine learning and deep learning models, while this project used only BBB/2013J and focused on a transparent rule-based expert system. Their reported models generally achieved stronger risk-class metrics, especially the custom neural network. The expert system in this project therefore should not be presented as outperforming those models. Its contribution is narrower: within the BBB/2013J early-window setup, it achieved performance close to the two local ML baselines while producing a compact, inspectable rule base.

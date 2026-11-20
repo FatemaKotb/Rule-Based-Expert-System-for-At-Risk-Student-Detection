@@ -1,0 +1,7 @@
+\section{INTRODUCTION}
+
+Distance learning universities collect large amounts of data on how students engage with their courses, including assessment scores, interactions with online materials, and registration details. One practical use of this data is to identify students who are likely to fail or withdraw early enough for support to make a difference. This task is known as at-risk prediction and has become a central problem in learning analytics research.
+
+Machine learning models have been applied to this problem with strong results, but most produce predictions without explaining the reasoning behind them. In an educational setting this is a problem, because tutors and support staff need to understand why a student has been flagged in order to decide what kind of help to offer. Rule-based expert systems address this directly by encoding all decision logic as explicit IF-THEN rules that can be read and checked before the system is used, rather than explaining predictions after the fact.
+
+This study builds a rule-based expert system for early at-risk prediction on the Open University Learning Analytics Dataset and compares it against logistic regression and a support vector machine. All three systems use only data from the first fourteen weeks of enrolment and are evaluated on accuracy, precision, recall, and F1-score. Recall is given particular attention because missing a student who genuinely needs help is more serious than incorrectly flagging one who does not.
