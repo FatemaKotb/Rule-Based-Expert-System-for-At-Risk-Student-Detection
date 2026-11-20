@@ -1,20 +1,10 @@
 # Rule-Based Expert System for Early Identification of At-Risk Students
 
-A rule-based expert system that flags students at risk of failing or withdrawing from online courses early enough to intervene, benchmarked against logistic regression and SVM baselines. Interpretable IF-THEN rules are extracted from a shallow decision tree and deployed in an [Experta](https://github.com/nilp0inter/experta) inference engine, achieving the highest recall of the three systems while keeping the full decision logic inspectable.
+A rule-based expert system that flags students at risk of failing or withdrawing from online courses early enough to intervene. Interpretable IF-THEN rules are extracted from a shallow decision tree and run in an [Experta](https://github.com/nilp0inter/experta) inference engine, then benchmarked against logistic regression and SVM baselines. On the Open University Learning Analytics Dataset (OULAD), using only the first 14 weeks of enrolment, the expert system matched the baselines while reaching the highest recall — and, unlike them, kept its full decision logic readable as 14 rules.
 
-Built on the Open University Learning Analytics Dataset (OULAD), using only the first 14 weeks of enrolment so that predictions can be acted on while there is still time to help.
+Built as the course project for CMP610 Expert Systems (Postgraduate Studies, Cairo University). The write-up is in [`paper/paper.pdf`](paper/paper.pdf), with LaTeX source in [`paper/`](paper/).
 
-## Paper
-
-**Rule-Based Expert System for Early Identification of At-Risk Students in Online Learning** — Fatema Kotb and Noran Hany, Computer Engineering Department, Faculty of Engineering, Cairo University.
-
-Read it: [`paper/paper.pdf`](paper/paper.pdf). LaTeX source in [`paper/`](paper/).
-
-## Course Context
-
-Course project for CMP610 Expert Systems (Postgraduate Studies, Cairo University), combining expert systems with machine learning.
-
-## Repository Structure
+## Repository
 
 ```
 .
@@ -23,41 +13,36 @@ Course project for CMP610 Expert Systems (Postgraduate Studies, Cairo University
 │   ├── oulad_eda.ipynb                  # exploratory data analysis
 │   ├── oulad_risk_es_vs_ml.ipynb        # rule extraction, Experta ES, LR + SVM, evaluation
 │   ├── render_oulad_rules_tree.py       # renders the decision-tree figure
-│   ├── oulad_generated_expert_system_rules.csv
-│   ├── oulad_generated_expert_system_knowledge_base.json
+│   ├── oulad_generated_expert_system_rules.csv / .json   # extracted knowledge base
 │   ├── oulad_decision_tree_from_rules.png
 │   └── data/oulad_processed.csv         # preprocessed, model-ready dataset
 ├── uci-student-performance/             # earlier exploratory version, kept for reference
-├── paper/                               # LaTeX source and compiled PDF
-└── README.md
+└── paper/                               # LaTeX source and compiled PDF
 ```
 
-## Setup
+## Running it
 
-Python (notebooks and figure rendering):
+Install the dependencies — Python for the notebooks and figures, R only for regenerating the OULAD data:
 
 ```
 pip install pandas matplotlib scikit-learn experta jupyter
 ```
-
-R (OULAD preprocessing only):
-
 ```r
 install.packages("ouladFormat")
 ```
 
+The pipeline runs in four stages inside `oulad/`. The processed dataset is already committed, so you can skip straight to stage 2:
+
+1. `preprocess_oulad.R` — rebuild `data/oulad_processed.csv` from the raw OULAD data (downloaded by `ouladFormat`).
+2. `oulad_eda.ipynb` — explore the data and produce the target-distribution figures.
+3. `oulad_risk_es_vs_ml.ipynb` — extract the rule base, run the expert system, and compare it against the LR and SVM baselines.
+4. `render_oulad_rules_tree.py` — render the decision-tree figure from the extracted rules.
+
 A fixed random seed (42) is used throughout for reproducibility.
 
-## Reproducing the Results
+## Results
 
-1. *(Optional)* Run `oulad/preprocess_oulad.R` to regenerate `data/oulad_processed.csv`; skip to use the committed file.
-2. Run `oulad/oulad_eda.ipynb` for the exploratory analysis and figures.
-3. Run `oulad/oulad_risk_es_vs_ml.ipynb` to extract the rule base and run the expert system alongside the LR and SVM baselines.
-4. *(Optional)* Run `oulad/render_oulad_rules_tree.py` to regenerate the decision-tree figure.
-
-The raw OULAD data is downloaded by `ouladFormat`; the processed CSV is committed, so the notebooks run without regenerating it.
-
-## Results (test set, positive class: At Risk)
+On the held-out test set (positive class: At Risk):
 
 | System | Accuracy | Precision | Recall | F1 |
 |---|---|---|---|---|
@@ -65,12 +50,8 @@ The raw OULAD data is downloaded by `ouladFormat`; the processed CSV is committe
 | Logistic Regression | 0.828 | 0.738 | 0.768 | 0.753 |
 | SVM | **0.849** | **0.784** | 0.768 | **0.776** |
 
-Average continuous assessment score was the dominant predictor in the 14-rule knowledge base.
+Average continuous assessment score was the dominant predictor across the 14-rule knowledge base.
 
-## Authors
+---
 
-Fatema Kotb and Noran Hany.
-
-## License
-
-MIT — see [`LICENSE`](LICENSE).
+Fatema Kotb and Noran Hany · Licensed under MIT.
