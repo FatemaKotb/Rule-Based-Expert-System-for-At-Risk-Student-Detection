@@ -1,8 +1,8 @@
-# Rule-Based Expert System for At-Risk Student Detection
+# Rule-Based Expert System for Early Identification of At-Risk Students
 
 A rule-based expert system that flags students at risk of failing or withdrawing from online courses early enough to intervene. Interpretable IF-THEN rules are extracted from a shallow decision tree and run in an Experta inference engine, then benchmarked against logistic regression and SVM baselines on the OULAD dataset using only the first 14 weeks of enrolment. The expert system matches the baselines while reaching the highest recall, and keeps its full decision logic readable as 14 rules.
 
-Course project for CMP610 Expert Systems, Cairo University. Paper in `paper/`.
+Course project for CMP610 Expert Systems, Cairo University. The paper (PDF and LaTeX source) is in `paper/`.
 
 ## Structure
 
@@ -42,7 +42,7 @@ Seed 42 throughout.
 
 ## Results
 
-Held-out test set, positive class At Risk:
+Test-set performance (positive class: At Risk):
 
 | System | Accuracy | Precision | Recall | F1 |
 |---|---|---|---|---|
@@ -56,5 +56,5 @@ Licensed under MIT.
 
 ## Contributors
 
-| [Fatema Kotb](https://github.com/FatemaKotb) | [Noran Hany](https://github.com/NouranHany) |
+| [<img src="https://github.com/FatemaKotb.png" width="80" alt="Fatema Kotb"/><br/>Fatema Kotb](https://github.com/FatemaKotb) | [<img src="https://github.com/NouranHany.png" width="80" alt="Noran Hany"/><br/>Noran Hany](https://github.com/NouranHany) |
 |:-:|:-:|
